@@ -1,0 +1,27 @@
+<h1>{{msg}}</h1>
+<form>
+<input type="text" ng-model="temp.id">
+
+<input type="text" ng-model="temp.comment">
+
+<button ng-click="sendData(temp)">Send Data</button>
+</form>
+<table class="table">
+    <tbody>
+        <tr ng-repeat="t in sampleModel.testData track by $index">
+            <td>
+                {{t.id}}
+            </td>
+            <td>
+               <input type="text" ng-model="t.name">
+            </td>
+            <td ng-bind="t.email">
+             
+            </td>
+            <td>
+                {{t.body}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
